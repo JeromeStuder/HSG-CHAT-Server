@@ -10,6 +10,10 @@ server.listen(server_port, server_ip_address, () => {
   console.log( "Listening on " + server_ip_address + ", port " + server_port )
 });
 
+app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/index.html');
+});
+
 io.on('connection', (socket) => {
   
   socket.on('disconnect',function(){
