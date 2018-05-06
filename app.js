@@ -1,13 +1,15 @@
-let app = require('express')();
-let http = require('http').Server(app);
-let io = require('socket.io')(http);
+var express = require('express');
+var app = express();
+var path = require('path');
+var server = require('http').createServer(app);
+var io = require('../..')(server);
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
  
 
 
-io.on('connection' (socket)=>{
+io.on('connection', (socket) => {
   
   socket.on('disconnect',function(){
     console.log('disconnect');
