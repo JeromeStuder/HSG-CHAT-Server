@@ -19,6 +19,6 @@ io.on('connection', (socket) => {
   });
 });
 
-http.listen(server_port, server_ip_address, function () {
+server.listen(server_port, server_ip_address, function () {
   console.log( "Listening on " + server_ip_address + ", port " + server_port )
 });
