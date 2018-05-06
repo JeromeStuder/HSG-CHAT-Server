@@ -1,0 +1,9 @@
+{
+  "name": "hsg-chat",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "main": "app.js"
+}
